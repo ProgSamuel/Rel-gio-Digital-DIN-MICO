@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #ffe53bd8, #ff2525da);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#selectTema {
+  width: 8vw;
+  height: 5vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: fixed; right: 1vw; top: 2vh;
+  opacity: 0.6;
+  color: black;
+}
+
+
+.relogio {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 23vh; /*  200px - 23vh */
+  width: 35vw; /*  550px -- 35vw */
+  background: transparent;
+  border-radius: 5px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.relogio div {
+  height: 85%; /*  170px -- 85%  */
+  width: 25%; /*  150PX --  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: rgba(5, 5, 5, 0.9);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  letter-spacing: 3px;
+}
+
+.relogio span {
+  font-weight: bolder;
+  font-size: 60px; /* 60px --  */
+}
+
+.relogio span.tempo {
+  font-size: 10px; /*  10px --  */
+}
+
+/* -------------------------------------  max 1000px ------------------------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .relogio {
+    height: 30vh;
+    width: 85vw;
+  }
+
+  .relogio span {
+    font-size: 100px;
+  }
+
+  .relogio span.tempo {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  #selectTema {
+    width: 11vw;
+    height: 3vh;
+    position: fixed; right: 1vw; top: 2vh;
+   
+  }
+}
+
+/*  ---------------------------------------------     max 576px - smartphones ---------------------------------------------------- */
+
+@media (max-width: 576px) {
+  .relogio {
+    display: flex;
+    flex-direction: column;
+    height: 70vh; /*  200px - 23vh */
+    width: 60vw; /*  550px -- 35vw */
+  }
+
+  .relogio div {
+    height: 28%; /*  170px -- 85%  */
+    width: 70%; /*  150PX --  */
+  }
+
+  .relogio span {
+    font-size: 60px;
+  }
+
+  .relogio span.tempo {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  #selectTema {
+    width: 4vw;
+    height: 2vh;
+    position: fixed; right: 1vw; top: 2vh;
+   
+  }
+}
